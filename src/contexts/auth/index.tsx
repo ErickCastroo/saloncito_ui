@@ -9,12 +9,16 @@ type AuthContextType = {
   user?: UserEntity
   setUser: (user: UserEntity) => void
   verifiedUser: boolean
+  signIn: (user: UserEntity) => void
+  logout: () => void
 }
 
 const defaultAuthContext: AuthContextType = {
   user: undefined,
   setUser: () => {},
-  verifiedUser: false
+  verifiedUser: false,
+  signIn: () => {},
+  logout: () => {}
 }
 
 const AuthContext = createContext<AuthContextType>(defaultAuthContext)
@@ -45,7 +49,7 @@ function AuthProvider({ children }: AuthProviderProps) {
       setVerifiedUser(true)
       navigate('/sign-in')
     }
-  }, [user, navigate])
+  }, [navigate])
 
   const signIn = (user: UserEntity) => {
     localStorage.setItem(LocalStorageKey.USER, JSON.stringify(user))
