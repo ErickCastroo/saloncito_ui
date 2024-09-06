@@ -7,6 +7,7 @@ import { PublicRoute } from '@/contexts/auth/PublicRoute'
 import { Layout } from '@/components/Layout'
 import { Home } from '@/modules/home/ui/pages/Home'
 import { SignIn } from '@/modules/auth/ui/pages/SignIn'
+import { SignUp } from '@/modules/auth/ui/pages/SignUp'
 
 function Router() {
   return (
@@ -27,6 +28,14 @@ function Router() {
               element={(
                 <PublicRoute>
                   <SignIn />
+                </PublicRoute>
+              )}
+            />
+            <Route
+              path='/sign-up'
+              element={(
+                <PublicRoute>
+                  <SignUp />
                 </PublicRoute>
               )}
             />
