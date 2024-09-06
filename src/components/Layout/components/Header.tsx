@@ -4,15 +4,20 @@ import defaultPfp from '@/assets/images/default-pfp.png'
 
 type HeaderProps = {
   isMenuOpen: boolean
-  setIsMenuOpen: (isMenuOpen: boolean) => void
+  setIsMenuOpen: (isMenuOpen: boolean) => void,
+  headerRef: React.MutableRefObject<HTMLHeadElement | null>
 }
 
 function Header({
   isMenuOpen,
-  setIsMenuOpen
+  setIsMenuOpen,
+  headerRef
 }: HeaderProps) {
   return (
-    <header className='bg-secondary text-secondary min-w-screen flex justify-between items-center border-b-2 shadow-md p-2'>
+    <header
+      ref={headerRef}
+      className='bg-secondary text-secondary min-w-screen flex justify-between items-center p-2 z-20'
+    >
       <div className='flex items-center'>
         <button
           type='button'
