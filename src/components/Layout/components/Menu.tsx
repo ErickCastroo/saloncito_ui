@@ -1,24 +1,16 @@
-import { useEffect, useState } from 'react'
-
 import { PrincipalSection } from '@/components/Layout/components/LoggedSection'
 // import { GuestSection } from '@/components/Layout/components/GuestSection'
 
 type MenuProps = {
   isMenuOpen: boolean
-  headerRef: React.MutableRefObject<HTMLHeadElement | null>
+  headerHeight: number
 }
 
 function Menu({
   isMenuOpen,
-  headerRef
+  headerHeight
 }: MenuProps) {
-  const [headerHeight, setHeaderHeight] = useState(0)
-
-  useEffect(() => {
-    if (headerRef.current) {
-      setHeaderHeight(headerRef.current.offsetHeight)
-    }
-  }, [headerRef])
+  
 
   return (
     <aside

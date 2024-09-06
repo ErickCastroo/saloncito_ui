@@ -2,8 +2,8 @@ import { NavLink } from 'react-router-dom'
 
 function SignIn() {
   return (
-    <div className='p-1 w-full h-screen flex justify-center items-center '>
-      <div className='w-10/12 h-full flex items-center justify-center '>
+    <div className='p-1 w-full h-full flex justify-center items-center'>
+      <div className='w-10/12 h-full flex items-center justify-center'>
         {/* Cajita 1 */}
         <div className=' hidden bg-secondary w-1/2 h-5/6 md:flex items-center justify-center'>
           <img className='w-72 h-72' src='https://picsum.photos/200' alt='logo' />

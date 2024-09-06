@@ -47,7 +47,6 @@ function AuthProvider({ children }: AuthProviderProps) {
     } else {
       setUser(undefined)
       setVerifiedUser(true)
-      navigate('/sign-in')
     }
   }, [navigate])
 

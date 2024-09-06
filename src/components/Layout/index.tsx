@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { Header } from '@/components/Layout/components/Header'
 import { Menu } from '@/components/Layout/components/Menu'
@@ -12,10 +12,17 @@ function Layout({
   children
 }: LayoutProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [headerHeight, setHeaderHeight] = useState(0)
   const headerRef = useRef<HTMLHeadElement>(null)
 
+  useEffect(() => {
+    if (headerRef.current) {
+      setHeaderHeight(headerRef.current.offsetHeight)
+    }
+  }, [headerRef])
+
   return (
-    <div className='min-h-screen relative bg'>
+    <div className='min-h-screen relative bg flex flex-col'>
       <Header
         isMenuOpen={isMenuOpen}
         setIsMenuOpen={setIsMenuOpen}
@@ -23,9 +30,12 @@ function Layout({
       />
       <Menu
         isMenuOpen={isMenuOpen}
-        headerRef={headerRef}
+        headerHeight={headerHeight}
       />
-      <main className='w-full flex flex-col text-pretty'>
+      <main
+        className='w-full flex flex-col text-pretty overflow-y-auto'
+        style={{ height: `calc(100vh - ${headerHeight}px)` }}
+      >
         {children}
       </main>
       <ClassButton />
