@@ -1,4 +1,5 @@
-// authInterceptor.js
+import { LocalStorageKey } from '@/constants/localstorage'
+
 import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import {
   baseRequestInterceptor,
@@ -19,6 +20,9 @@ const authRequestInterceptor = async (config: InternalAxiosRequestConfig) => {
 const authResponseInterceptor = async (response: AxiosResponse) => {
   try {
     response = await baseResponseInterceptor(response)
+    if (response.status === 401) {
+      localStorage.removeItem(LocalStorageKey.USER)
+    }
     return response
   } catch (error) {
     return baseErrorHandler(error as AxiosError)
