@@ -1,4 +1,7 @@
-import { HiOutlineBars4 } from 'react-icons/hi2'
+import {
+  HiOutlineXMark,
+  HiOutlineBars4
+} from 'react-icons/hi2'
 
 import defaultPfp from '@/assets/images/default-pfp.png'
 
@@ -16,7 +19,7 @@ function Header({
   return (
     <header
       ref={headerRef}
-      className='bg-secondary text-secondary min-w-screen flex justify-between items-center p-2 z-20'
+      className='bg-secondary text-secondary min-w-screen flex justify-between items-center border-b-2 p-2 z-20'
     >
       <div className='flex items-center'>
         <button
@@ -24,7 +27,7 @@ function Header({
           className='text-3xl mr-2'
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
-          <HiOutlineBars4 />
+          {isMenuOpen ? <HiOutlineXMark /> : <HiOutlineBars4 />}
         </button>
         <h1 className='text-xl'>
           Saloncito
