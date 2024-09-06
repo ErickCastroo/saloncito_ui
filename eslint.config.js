@@ -23,6 +23,8 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      'quotes': ['error', 'single'], // Usar comillas simples
+      'semi': ['error', 'never'], // No usar punto y coma
     },
   },
 )
