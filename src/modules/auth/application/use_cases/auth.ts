@@ -3,7 +3,7 @@ import { AuthRepository } from '@/modules/auth/domain/repository'
 import { signInSchema, signUpSchema } from '@/modules/auth/application/schemas/auth'
 
 export class AuthUseCase {
-  readonly authRepository: AuthRepository
+  private readonly authRepository: AuthRepository
 
   constructor(authRepository: AuthRepository) {
     this.authRepository = authRepository
