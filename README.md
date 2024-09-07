@@ -10,4 +10,4 @@
 7. Components
 8. Icons
 9. Assets (images, svgs, sounds, etc.)
-10. CSS 
+10. CSS
