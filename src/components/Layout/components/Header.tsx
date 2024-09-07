@@ -19,7 +19,7 @@ function Header({
   return (
     <header
       ref={headerRef}
-      className='bg-secondary text-secondary w-full flex justify-between items-center border-b-2 p-2 z-20'
+      className='bg-secondary text-secondary w-full flex justify-between items-center border-b-2 p-2 z-30'
     >
       <div className='flex items-center'>
         <button

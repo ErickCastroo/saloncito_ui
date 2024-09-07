@@ -14,7 +14,7 @@ function Menu({
 
   return (
     <aside
-      className={`w-96 fixed bg-secondary text-secondary z-10 overflow-y-auto select-none flex flex-col justify-between p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'left-0' : '-left-96 shadow-xl'}`}
+      className={`w-96 fixed bg-secondary text-secondary z-20 overflow-y-auto select-none flex flex-col justify-between p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'left-0' : '-left-96 shadow-xl'}`}
       style={{ height: `calc(100vh - ${headerHeight}px)`, top: `${headerHeight}px` }}
     >
       <PrincipalSection />
