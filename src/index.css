@@ -6,10 +6,12 @@
 
 :root {
   --color-primary: #f4f4f4;
+  --color-primary-hover: #e6e3e3;
   --color-secondary: #DC7F37;
   --color-tertiary: #B94645;
   --color-quaternary: #9B2F3E;
   --color-quinary: #410324;
+  --color-quinary-hover: #3d0322;
   --color-senary: #960E53;
 }
 
@@ -20,17 +22,29 @@
 }
 
 .bg {
-  background-color: var(--color-primary);
+  @apply bg-[var(--color-primary)] text;
+}
+
+.bg-hover {
+  @apply bg-[var(--color-primary)] text hover:bg-[var(--color-primary-hover)];
 }
 
 .bg-secondary {
-  background-color: var(--color-quinary);
+  @apply bg-[var(--color-quinary)] text-secondary;
+}
+
+.bg-secondary-hover {
+  @apply bg-[var(--color-quinary)] text-secondary hover:bg-[var(--color-quinary-hover)];
+}
+
+.bg-tertiary {
+  @apply bg-[var(--color-tertiary)];
 }
 
 .text {
-  color: var(--color-quinary);
+  @apply text-[var(--color-quinary)];
 }
 
 .text-secondary {
-  color: var(--color-primary);
+  @apply text-[var(--color-primary)];
 }
