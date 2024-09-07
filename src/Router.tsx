@@ -8,6 +8,8 @@ import { Layout } from '@/components/Layout'
 import { Home } from '@/modules/home/ui/pages/Home'
 import { SignIn } from '@/modules/auth/ui/pages/SignIn'
 import { SignUp } from '@/modules/auth/ui/pages/SignUp'
+import { Error404 } from '@/components/Error404'
+import { AboutSaloncito } from './modules/about/ui/pages/AboutSaloncito'
 
 function Router() {
   return (
@@ -15,6 +17,12 @@ function Router() {
       <AuthProvider>
         <Layout>
           <Routes>
+            <Route
+              path='*'
+              element={(
+                <Error404 />
+              )}
+            />
             <Route
               path='/'
               element={(
@@ -37,6 +45,12 @@ function Router() {
                 <PublicRoute>
                   <SignUp />
                 </PublicRoute>
+              )}
+            />
+            <Route
+              path='/about-saloncito'
+              element={(
+                <AboutSaloncito />
               )}
             />
           </Routes>
