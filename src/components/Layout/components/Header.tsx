@@ -1,3 +1,5 @@
+import { useAuth } from '@/contexts/auth/useAuth'
+
 import {
   HiOutlineXMark,
   HiOutlineBars4
@@ -16,6 +18,8 @@ function Header({
   setIsMenuOpen,
   headerRef
 }: HeaderProps) {
+  const auth = useAuth()
+
   return (
     <header
       ref={headerRef}
@@ -33,13 +37,15 @@ function Header({
           Saloncito
         </h1>
       </div>
-      <figure className='p-1'>
-        <img
-          src={defaultPfp}
-          alt='Profile picture'
-          className='w-8 h-8 rounded-full'
-        />
-      </figure>
+      {auth.user ? (
+        <figure className='p-1'>
+          <img
+            src={defaultPfp}
+            alt='Profile picture'
+            className='w-8 h-8 rounded-full'
+          />
+        </figure>
+      ) : undefined}
     </header>
   )
 }

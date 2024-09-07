@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { Header } from '@/components/Layout/components/Header'
 import { Menu } from '@/components/Layout/components/Menu'
@@ -11,9 +12,15 @@ type LayoutProps = {
 function Layout({
   children
 }: LayoutProps) {
+  const navigate = useNavigate()
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [headerHeight, setHeaderHeight] = useState(0)
   const headerRef = useRef<HTMLHeadElement>(null)
+
+  useEffect(() => {
+    setIsMenuOpen(false)
+  }, [navigate])
 
   useEffect(() => {
     if (headerRef.current) {

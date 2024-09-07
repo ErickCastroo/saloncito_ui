@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
 import {
-  HiOutlineHome,
+  HiOutlineBookOpen,
   HiOutlineArrowLeftOnRectangle,
   HiOutlineUserPlus
 } from 'react-icons/hi2'
@@ -16,9 +16,9 @@ function GuestSection() {
               className={({ isActive }) => {
                 return `rounded flex items-center p-2 border-2 ${isActive ? '' : 'border-transparent'}`
               }}
-              to='/'
+              to='/about-saloncito'
             >
-              <HiOutlineHome className='mr-2 text-xl' /> Home
+              <HiOutlineBookOpen className='mr-2 text-xl' /> About Saloncito
             </NavLink>
           </li>
           <li className='mt-2'>
