@@ -49,7 +49,7 @@ function Form() {
       className='w-full flex flex-col items-center justify-center'
     >
       <div className='w-full flex flex-col justify-center'>
-        <label htmlFor='name' className='mb-1 text-lg'>
+        <label htmlFor='name' className='mb-1 sm:text-lg'>
           Name
         </label>
         <Input
@@ -63,7 +63,7 @@ function Form() {
         {errors.name ? <ErrorForm>{errors.name.message}</ErrorForm> : undefined}
       </div>
       <div className='w-full flex flex-col justify-center mt-4'>
-        <label htmlFor='email' className='mb-1 text-lg'>
+        <label htmlFor='email' className='mb-1 sm:text-lg'>
           Email
         </label>
         <Input
@@ -77,7 +77,7 @@ function Form() {
         {errors.email ? <ErrorForm>{errors.email.message}</ErrorForm> : undefined}
       </div>
       <div className='w-full flex flex-col justify-center mt-4'>
-        <label htmlFor='password' className='mb-1 text-lg'>
+        <label htmlFor='password' className='mb-1 sm:text-lg'>
           Password
         </label>
         <Input
@@ -91,7 +91,7 @@ function Form() {
         {errors.password ? <ErrorForm>{errors.password.message}</ErrorForm> : undefined}
       </div>
       <div className='w-full flex flex-col justify-center mt-4'>
-        <label htmlFor='confirmPassword' className='mb-1 text-lg'>
+        <label htmlFor='confirmPassword' className='mb-1 sm:text-lg'>
           Confirm Password
         </label>
         <Input
@@ -106,7 +106,7 @@ function Form() {
       </div>
       <Button
         type='submit'
-        className='bg-hover self-center mt-8'
+        className='bg-hover self-center my-8'
       >
         Sign Up
       </Button>

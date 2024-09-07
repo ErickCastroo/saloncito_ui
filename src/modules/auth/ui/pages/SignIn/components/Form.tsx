@@ -38,7 +38,7 @@ function Form() {
       className='w-full flex flex-col items-center justify-center'
     >
       <div className='w-full flex flex-col justify-center '>
-        <label htmlFor='email' className='mb-1 text-lg'>
+        <label htmlFor='email' className='mb-1 sm:text-lg'>
           Email
         </label>
         <Input
@@ -52,7 +52,7 @@ function Form() {
         {errors.email ? <ErrorForm>{errors.email.message}</ErrorForm> : undefined}
       </div>
       <div className='w-full flex flex-col justify-center mt-4'>
-        <label htmlFor='password' className='mb-1 text-lg'>
+        <label htmlFor='password' className='mb-1 sm:text-lg'>
           Password
         </label>
         <Input
