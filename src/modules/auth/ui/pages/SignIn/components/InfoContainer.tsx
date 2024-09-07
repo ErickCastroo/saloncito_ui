@@ -3,7 +3,7 @@ import { Form } from '@/modules/auth/ui/pages/SignIn/components/Form'
 
 function InfoContainer() {
   return (
-    <div className='bg-secondary text-secondary w-full h-5/6 md:w-1/2 relative flex flex-col justify-center items-center rounded-tr rounded-br'>
+    <div className='bg-secondary text-secondary w-full h-5/6 md:w-1/2 rounded md:rounded-none md:rounded-tr md:rounded-br relative flex flex-col justify-center items-center'>
       <div className='absolute right-0 top-0'>
         <NavLink to='/sign-up' className='flex justify-end self-end mt-3 mr-4 hover:underline hover:underline-offset-2'>Sign Up</NavLink>
       </div>
