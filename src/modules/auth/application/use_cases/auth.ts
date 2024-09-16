@@ -1,3 +1,4 @@
+import { UserEntity } from '@/modules/user/domain/entity'
 import { AuthRepository } from '@/modules/auth/domain/repository'
 
 import { signInSchema, signUpSchema } from '@/modules/auth/application/schemas/auth'
@@ -9,13 +10,13 @@ export class AuthUseCase {
     this.authRepository = authRepository
   }
 
-  async signIn(email: string, password: string): Promise<object> {
+  async signIn(email: string, password: string): Promise<UserEntity> {
     signInSchema.parse({ email, password })
 
     return this.authRepository.signIn(email, password)
   }
 
-  async signUp(email: string, password: string, name: string): Promise<object> {
+  async signUp(email: string, password: string, name: string): Promise<UserEntity> {
     signUpSchema.parse({ email, password, name })
 
     return this.authRepository.signUp(email, password, name)
