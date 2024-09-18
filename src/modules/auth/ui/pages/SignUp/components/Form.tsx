@@ -1,13 +1,25 @@
+import { AxiosRepository } from '@/modules/auth/infrastructure/repositories/axios'
+import { AuthUseCase } from '@/modules/auth/application/use_cases/auth'
+
 import { z } from 'zod'
 import { zodResolver } from '@hookform/resolvers/zod'
+
+import { useAuth } from '@/contexts/auth/useAuth'
 
 import { SubmitHandler, useForm } from 'react-hook-form'
 
 import { Button } from '@/components/Button'
 import { Input } from '@/components/Input'
 import { ErrorForm } from '@/components/ErrorForm'
+import { toast } from 'sonner'
+
+const authRepository = new AxiosRepository()
+const authUseCase = new AuthUseCase(authRepository)
 
 function Form() {
+
+  const auth = useAuth()
+
   const SignUpSchema = z.object({
     name: z.string().min(3, { message: 'Name must be at least 3 characters long' }),
     email: z.string().email({ message: 'Invalid email address' }),
@@ -40,7 +52,14 @@ function Form() {
   })
 
   const onSubmit: SubmitHandler<SignUpSchemaType> = async (data) => {
-    console.log(data)
+    try{
+      const response = await authUseCase.signUp(data.email, data.password, data.name)
+      auth.signIn(response)
+      
+    } catch (error) {
+      console.error(error)
+      toast.error('An error occurred while trying to sign up')
+    }
   }
 
   return (

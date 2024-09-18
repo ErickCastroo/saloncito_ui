@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom'
 import { Header } from '@/components/Layout/components/Header'
 import { Menu } from '@/components/Layout/components/Menu'
 import { ClassButton } from '@/components/Layout/components/ClassButton'
+import { Toaster } from 'sonner'
 
 type LayoutProps = {
   children: React.ReactNode
@@ -46,6 +47,11 @@ function Layout({
         {children}
       </main>
       <ClassButton />
+      <Toaster
+        closeButton={true}
+        richColors={true}
+        expand={true}
+      />
     </div>
   )
 }
