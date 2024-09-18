@@ -1,25 +1,27 @@
 import { LocalStorageKey } from '@/constants/localstorage'
 
-import axios, { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
+import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios'
 import {
   baseRequestInterceptor,
   baseResponseInterceptor,
   baseErrorHandler,
 } from '@/api/interceptors/base'
 
-const authRequestInterceptor = async (config: InternalAxiosRequestConfig) => {
+export const authRequestInterceptor = async (config: InternalAxiosRequestConfig) => {
   try {
     config = await baseRequestInterceptor(config)
     config.withCredentials = true
+    console.log('interceptor auth')
     return config
   } catch (error) {
     return baseErrorHandler(error as AxiosError)
   }
 }
 
-const authResponseInterceptor = async (response: AxiosResponse) => {
+export const authResponseInterceptor = async (response: AxiosResponse) => {
   try {
     response = await baseResponseInterceptor(response)
+    console.log('interceptor auth')
     if (response.status === 401) {
       localStorage.removeItem(LocalStorageKey.USER)
     }
@@ -28,6 +30,3 @@ const authResponseInterceptor = async (response: AxiosResponse) => {
     return baseErrorHandler(error as AxiosError)
   }
 }
-
-axios.interceptors.request.use(authRequestInterceptor, baseErrorHandler)
-axios.interceptors.response.use(authResponseInterceptor, baseErrorHandler)
