@@ -1,6 +1,7 @@
 import { AxiosRepository } from '@/modules/auth/infrastructure/repositories/axios'
 import { AuthUseCase } from '@/modules/auth/application/use_cases/auth'
 
+import { useEffect, useRef } from 'react'
 import { useAuth } from '@/contexts/auth/useAuth'
 
 import { PrincipalSection } from '@/components/Layout/components/LoggedSection'
@@ -14,15 +15,17 @@ const authUseCase = new AuthUseCase(authRepository)
 
 type MenuProps = {
   isMenuOpen: boolean
+  setIsMenuOpen: (isMenuOpen: boolean) => void
   headerHeight: number
 }
 
 function Menu({
   isMenuOpen,
+  setIsMenuOpen,
   headerHeight
 }: MenuProps) {
   const auth = useAuth()
-
+  const asideRef = useRef<HTMLElement>(null)
 
   const handlerLogout = async () => {
     try {
@@ -34,10 +37,25 @@ function Menu({
     }
   }
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (asideRef.current && !asideRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [setIsMenuOpen])
+
   return (
     <aside
       className={`w-96 fixed bg-secondary text-secondary z-20 overflow-y-auto select-none flex flex-col justify-between p-4 transition-all duration-300 ease-in-out ${isMenuOpen ? 'left-0' : '-left-96 shadow-xl'}`}
       style={{ height: `calc(100vh - ${headerHeight}px)`, top: `${headerHeight}px` }}
+      ref={asideRef}
     >
       {auth.user ? <PrincipalSection /> : <GuestSection />}
 

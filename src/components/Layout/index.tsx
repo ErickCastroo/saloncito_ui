@@ -38,6 +38,7 @@ function Layout({
       />
       <Menu
         isMenuOpen={isMenuOpen}
+        setIsMenuOpen={setIsMenuOpen}
         headerHeight={headerHeight}
       />
       <main
