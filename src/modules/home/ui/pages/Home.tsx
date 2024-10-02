@@ -1,7 +1,59 @@
+import { Card } from '@/components/Card'
+
 function Home() {
+
   return (
-    <div>
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem at qui mollitia eaque repellat, laudantium voluptatibus ipsam exercitationem aliquid in maxime corrupti dolorem, hic repellendus quod voluptas fuga, ullam expedita nesciunt consequatur facere blanditiis laborum? Labore possimus, dicta dolor harum corrupti animi totam sint natus quis voluptate! Sed doloremque at harum aliquam repellendus voluptatibus quia, expedita pariatur praesentium in aut quibusdam nobis ipsum ex placeat enim voluptates nihil culpa dignissimos nostrum saepe deserunt delectus ullam animi! Voluptas, numquam saepe odio velit quos eum, eligendi reprehenderit dignissimos omnis autem ipsam doloribus sunt sed aut? Nisi maiores quisquam odit quidem, consequuntur itaque!
+    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 p-4 bg-gray-100'>
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      <Card
+        title='Curso de Matemáticas'
+        subtitle='Profesor: Juan Pérez'
+        description='Un curso sobre álgebra y geometría.'
+        imageUrl='https://via.placeholder.com/300x200'
+        onClick={() => console.log('Clase Seleccionada')}
+      />
+      
     </div>
   )
 }
