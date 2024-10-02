@@ -42,7 +42,7 @@ function Layout({
         headerHeight={headerHeight}
       />
       <main
-        className='w-full flex flex-col text-pretty overflow-y-auto'
+        className='w-full h-full flex flex-col text-pretty overflow-y-auto'
         style={{ height: `calc(100vh - ${headerHeight}px)` }}
       >
         {children}
