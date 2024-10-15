@@ -41,13 +41,13 @@ function Card() {
   return (
     <>
       {datacard.map((data) => (
-        <div className='border p-4 mb-4 '>
+        <article className='w-full border p-4 mb-4 rounded-lg bg-white'>
           <h2 className='text-lg font-semibold mb-1'>{data.title}</h2>
           <p className='text-gray-500 text-sm mb-2'>{data.date}</p>
           <p className='text-gray-700 text-sm mb-4'>{data.description}</p>
           <hr className='border-t border-gray-200 my-4' />
           <Link to='trabajos' className='text-blue-500 text-sm'>Ver más</Link>
-        </div>
+        </article>
       ))}
     </>
 

@@ -1,18 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 
 import { Header } from '@/components/Layout/components/Header'
 import { Menu } from '@/components/Layout/components/Menu'
 import { ClassButton } from '@/components/Layout/components/ClassButton'
 import { Toaster } from 'sonner'
 
-type LayoutProps = {
-  children: React.ReactNode
-}
-
-function Layout({
-  children
-}: LayoutProps) {
+function Layout() {
   const navigate = useNavigate()
 
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -42,10 +36,10 @@ function Layout({
         headerHeight={headerHeight}
       />
       <main
-        className='w-full h-full flex flex-col text-pretty overflow-y-auto'
+        className='w-full flex flex-col text-pretty overflow-y-auto'
         style={{ height: `calc(100vh - ${headerHeight}px)` }}
       >
-        {children}
+        <Outlet />
       </main>
       <ClassButton />
       <Toaster

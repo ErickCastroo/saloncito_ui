@@ -16,8 +16,8 @@ function Router() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <Layout>
-          <Routes>
+        <Routes>
+          <Route element={<Layout/>}>
             <Route
               path='*'
               element={(
@@ -62,8 +62,8 @@ function Router() {
                 <AboutSaloncito />
               )}
             />
-          </Routes>
-        </Layout>
+          </Route>
+        </Routes>
       </AuthProvider>
     </BrowserRouter>
   )
