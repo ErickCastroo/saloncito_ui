@@ -10,6 +10,7 @@ import { SignIn } from '@/modules/auth/ui/pages/SignIn'
 import { SignUp } from '@/modules/auth/ui/pages/SignUp'
 import { Error404 } from '@/components/Error404'
 import { AboutSaloncito } from './modules/about/ui/pages/AboutSaloncito'
+import { Classes } from '@/modules/class/ui/Home' 
 
 function Router() {
   return (
@@ -28,6 +29,14 @@ function Router() {
               element={(
                 <AuthRoute>
                   <Home />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/classes/:classId'
+              element={(
+                <AuthRoute>
+                  <Classes />
                 </AuthRoute>
               )}
             />
