@@ -1,3 +1,6 @@
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+
 import { AxiosRepository } from '@/modules/auth/infrastructure/repositories/axios'
 import { AuthUseCase } from '@/modules/auth/application/use_cases/auth'
 
@@ -26,6 +29,16 @@ function Menu({
 }: MenuProps) {
   const auth = useAuth()
   const asideRef = useRef<HTMLElement>(null)
+
+  const { i18n } = useTranslation()
+  const [language, setLanguage] = useState(i18n.language)
+
+  const handlerLanguage = () => {
+    const newLanguage = language === 'es' ? 'en' : 'es'
+    i18n.changeLanguage(newLanguage)
+    setLanguage(newLanguage)
+  }
+
 
   const handlerLogout = async () => {
     try {
@@ -75,8 +88,10 @@ function Menu({
 
         <Button
           className='bg-hover rounded p-2 m-1'
+          onClick={handlerLanguage}
         >
           <HiOutlineLanguage />
+          
         </Button>
       </div>
     </aside>

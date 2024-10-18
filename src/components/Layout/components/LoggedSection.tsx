@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
+import { useTranslation } from 'react-i18next'
+
 import {
   HiOutlineCalendar,
   HiOutlineHome,
@@ -7,6 +9,9 @@ import {
 } from 'react-icons/hi2'
 
 function PrincipalSection() {
+
+  const { t } = useTranslation()
+
   return (
     <div>
       <nav>
@@ -18,7 +23,7 @@ function PrincipalSection() {
               }}
               to='/'
             >
-              <HiOutlineHome className='mr-2 text-xl' /> Home
+              <HiOutlineHome className='mr-2 text-xl' />{t('home')}
             </NavLink>
           </li>
           <li className='mt-2'>
@@ -28,7 +33,7 @@ function PrincipalSection() {
               }}
               to='/calendar'
             >
-              <HiOutlineCalendar className='mr-2 text-xl' /> Calendar
+              <HiOutlineCalendar className='mr-2 text-xl' />{t('calendar')}
             </NavLink>
           </li>
           <li className='mt-2'>
@@ -38,7 +43,7 @@ function PrincipalSection() {
               }}
               to='/calendar'
             >
-              <HiOutlineClipboardDocumentList className='mr-2 text-xl' /> Earrings
+              <HiOutlineClipboardDocumentList className='mr-2 text-xl' /> {t('earrings')}
             </NavLink>
           </li>
         </ul>
