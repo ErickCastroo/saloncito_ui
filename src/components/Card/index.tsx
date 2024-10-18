@@ -15,7 +15,7 @@ const Card: FC<CardProps> = ({ id, title, subtitle, description, imageUrl, onCli
   return (
     <NavLink to={`/classes/${id}`} >
       <div
-        className='bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transition-transform transform hover:translate-y-[-5px] mx-2 mb-4'
+        className='bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer hover:drop-shadow-lg mx-2 mb-4'
         onClick={onClick}
       >
         <div className='h-48 bg-cover bg-center' style={{ backgroundImage: `url(${imageUrl})` }}></div>

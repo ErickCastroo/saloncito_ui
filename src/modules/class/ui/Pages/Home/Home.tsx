@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
-import { Header } from '@/modules/class/ui/components/Header'
-import { Card } from '@/modules/class/ui/components/card'
+import { Header } from '@/modules/class/ui/Pages/Home/components/Header'
+import { Card } from '@/modules/class/ui/Pages/Home/components/Card'
 
 function Classes() {
   const { classId } = useParams()
@@ -30,7 +31,7 @@ function Classes() {
         <div className='w-3/12 border hidden sm:flex flex-col items-center justify-center p-4 rounded-md'>
           <h2 className='w-full text-sm p-2 text-center'>Próximas</h2>
           <p className='text-sm text-gray-400 text-center'>¡Excelente! No tienes ninguna tarea para entregar pronto.</p>
-          <span className='text-blue-500 text-xs'>Ver más</span>
+          <Link to='/' className='text-blue-500 text-xs cursor-pointer'>Ver más</Link>
         </div>
         <div className='w-full sm:w-9/12'>
           <input type='text' placeholder='aununcia algo en clase' className='border border-gray-300 mb-2 w-full rounded-lg p-4' />

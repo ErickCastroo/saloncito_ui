@@ -46,7 +46,7 @@ function Card() {
           <p className='text-gray-500 text-sm mb-2'>{data.date}</p>
           <p className='text-gray-700 text-sm mb-4'>{data.description}</p>
           <hr className='border-t border-gray-200 my-4' />
-          <Link to='trabajos' className='text-blue-500 text-sm'>Ver más</Link>
+          <Link to='trabajos' className='text-blue-500 text-sm cursor-pointer'>Ver más</Link>
         </article>
       ))}
     </>
