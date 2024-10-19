@@ -1,5 +1,7 @@
 import { NavLink } from 'react-router-dom'
 
+import { useTranslation } from 'react-i18next'
+
 import { FC } from 'react'
 
 interface CardProps {
@@ -12,6 +14,7 @@ interface CardProps {
 }
 
 const Card: FC<CardProps> = ({ id, title, subtitle, description, imageUrl, onClick }) => {
+  const { t } = useTranslation()
   return (
     <NavLink to={`/classes/${id}`} >
       <div
@@ -27,7 +30,7 @@ const Card: FC<CardProps> = ({ id, title, subtitle, description, imageUrl, onCli
           <hr
             className='border-t border-gray-200 my-4'
           />
-          <span className='text-blue-500 text-sm'>Ver más</span>
+          <span className='text-blue-500 text-sm'>{t('showMore')}</span>
         </div>
       </div>
     </NavLink>
