@@ -10,7 +10,10 @@ import { SignIn } from '@/modules/auth/ui/pages/SignIn'
 import { SignUp } from '@/modules/auth/ui/pages/SignUp'
 import { Error404 } from '@/components/Error404'
 import { AboutSaloncito } from './modules/about/ui/pages/AboutSaloncito'
-import { Classes } from '@/modules/class/ui/Pages/Home/Home' 
+import { Classes } from '@/modules/class/ui/Pages/Home'
+import { Compañeros } from '@/modules/class/ui/Pages/Compañeros'
+import { Trabajos } from '@/modules/class/ui/Pages/Trabajos'
+
 
 function Router() {
   return (
@@ -37,6 +40,22 @@ function Router() {
               element={(
                 <AuthRoute>
                   <Classes />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/classes/:classId/:trabajosId'
+              element={(
+                <AuthRoute>
+                  <Trabajos />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/classes/:classId/:compañerosId'
+              element={(
+                <AuthRoute>
+                  <Compañeros />
                 </AuthRoute>
               )}
             />
