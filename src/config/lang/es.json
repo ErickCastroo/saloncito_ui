@@ -3,5 +3,7 @@
   "logout": "Cerrar sesión",
   "home": "Inicio",
   "calendar": "Calendario",
-  "earrings" : "Trabajos"
+  "earrings" : "Trabajos",
+  "joinClass" : "Unirse",
+  "createClass" : "Crear clase"
 }

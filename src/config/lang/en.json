@@ -3,5 +3,7 @@
   "logout": "Logout",
   "home": "Home",
   "calendar": "Calendar",
-  "earrings" : "Earrings"
+  "earrings" : "Earrings",
+  "joinClass" : "Join",
+  "createClass" : "Create class"
 }
