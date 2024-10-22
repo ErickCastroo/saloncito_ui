@@ -13,6 +13,7 @@ import { AboutSaloncito } from './modules/about/ui/pages/AboutSaloncito'
 import { Classes } from '@/modules/class/ui/Pages/Home'
 import { Compañeros } from '@/modules/class/ui/Pages/Compañeros'
 import { Trabajos } from '@/modules/class/ui/Pages/Trabajos'
+import { ViewTrabajo } from '@/modules/class/ui/Pages/ViewTrabajo'
 
 
 function Router() {
@@ -20,7 +21,7 @@ function Router() {
     <BrowserRouter>
       <AuthProvider>
         <Routes>
-          <Route element={<Layout/>}>
+          <Route element={<Layout />}>
             <Route
               path='*'
               element={(
@@ -44,7 +45,7 @@ function Router() {
               )}
             />
             <Route
-              path='/classes/:classId/:trabajosId'
+              path='/classes/:classId/trabajos'
               element={(
                 <AuthRoute>
                   <Trabajos />
@@ -52,7 +53,15 @@ function Router() {
               )}
             />
             <Route
-              path='/classes/:classId/:compañerosId'
+              path='/classes/:classId/trabajos/:trabajoId'
+              element={(
+                <AuthRoute>
+                  <ViewTrabajo />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/classes/:classId/compañeros'
               element={(
                 <AuthRoute>
                   <Compañeros />
