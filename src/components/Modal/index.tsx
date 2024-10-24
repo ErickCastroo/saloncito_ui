@@ -9,7 +9,7 @@ type ModalProps = {
 const Modal: FC<ModalProps> = ({modalOpen, onClose, children}) => {
   return (
     <div
-      className={`fixed inset-0 flex justify-center items-center transition-colors ${modalOpen ? 'visible bg-transparent' : 'invisible'}`}
+      className={`fixed inset-0 flex justify-center items-center transition-colors cursor-default ${modalOpen ? 'visible bg-black bg-opacity-30' : 'invisible'}`}
       onClick={onClose}
     >
       <div
