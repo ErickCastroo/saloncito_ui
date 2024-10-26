@@ -7,7 +7,7 @@ function JoinClass({ active, toggle }: { active: boolean; toggle: () => void }) 
 
   return (
     <Modal active={active} toggle={toggle}>
-      <div className="w-full h-full overflow-y-auto p-5"> 
+      <div className="w-full h-full overflow-y-auto p-5">
         <h2 className='text-xl text-black mb-5'>{t('joinClass')}</h2>
 
         <div className='border w-full h-auto text-black p-4'>
@@ -18,7 +18,7 @@ function JoinClass({ active, toggle }: { active: boolean; toggle: () => void }) 
           <input
             type='text'
             placeholder='Código de la clase'
-            className='border-2 border-black w-full h-full rounded-md text-black p-2 mb-5'
+            className='block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 mb-4'
           />
         </div>
 
