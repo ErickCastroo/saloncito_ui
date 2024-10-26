@@ -1,31 +1,32 @@
-import { FC, ReactNode } from 'react'
+import { Component, ReactNode } from 'react'
+import Portal from '@/components/Modal/portal'
+import { IoCloseSharp } from 'react-icons/io5'
 
 type ModalProps = {
-  modalOpen: boolean
-  onClose: () => void
-  children: ReactNode
+  children: ReactNode;
+  toggle: () => void;
+  active: boolean;
 }
 
-const Modal: FC<ModalProps> = ({modalOpen, onClose, children}) => {
-  return (
-    <div
-      className={`fixed inset-0 flex justify-center items-center transition-colors cursor-default ${modalOpen ? 'visible bg-black bg-opacity-30' : 'invisible'}`}
-      onClick={onClose}
-    >
-      <div
-        className={`bg-white rounded-lg shadow p-6 max-w-md ${modalOpen ? 'scale-100 opacity-100' : 'scale-110 opacity-0'}`}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button
-        className='absolute top-2 right-2 py-1 px-2 border border-neutral-200 rounded-md text-gray-400 bg-white hover:bg-gray-50 hover:text-gray-600'
-        onClick={onClose}
-        >
-          X
-        </button>
-        {children}
-      </div>
-    </div>
-  )
-}
+export default class Modal extends Component<ModalProps>  {
+  render() {
+    const { children, toggle, active } = this.props
 
-export { Modal }
+    return (
+      <Portal>
+        {
+          active && (
+            <div className='fixed top-0  left-0 w-full h-full text-slate-200 bg-black bg-opacity-60 flex justify-center items-center'>
+              <div className='relative  dark:bg-slate-900 text-slate-200 border border-gray-200 dark:border-gray-400 rounded-sm bg-white w-[70%] h-[70%] p-20 rounded-5 shadow-md'>
+                <button onClick={toggle} className='absolute top-0 right-0 bg-transparent border-none text-2xl px-6 py-5 cursor-pointer'>
+                  <IoCloseSharp />
+                </button>
+                {children}
+              </div>
+            </div>
+          )
+        }
+      </Portal>
+    )
+  }
+}
