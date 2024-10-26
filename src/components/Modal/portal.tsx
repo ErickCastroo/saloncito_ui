@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 const portalRoot = document.getElementById('portal')
 
-interface PortalProps {
+type PortalProps = {
   children: ReactNode;
 }
 
