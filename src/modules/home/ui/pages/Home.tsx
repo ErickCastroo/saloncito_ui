@@ -13,7 +13,7 @@ function Home() {
         onClick={() => console.log('Clase Seleccionada')}
       />
       <Card
-        id='Clase1'
+        id='Clase2'
         title='Curso de Matemáticas'
         subtitle='Profesor: Juan Pérez'
         description='Un curso sobre álgebra y geometría.'
@@ -21,7 +21,7 @@ function Home() {
         onClick={() => console.log('Clase Seleccionada')}
       />
       <Card
-        id='Clase1'
+        id='Clase3'
         title='Curso de Matemáticas'
         subtitle='Profesor: Juan Pérez'
         description='Un curso sobre álgebra y geometría.'
@@ -29,7 +29,7 @@ function Home() {
         onClick={() => console.log('Clase Seleccionada')}
       />
       <Card
-        id='Clase1'
+        id='Clase4'
         title='Curso de Matemáticas'
         subtitle='Profesor: Juan Pérez'
         description='Un curso sobre álgebra y geometría.'
@@ -37,7 +37,7 @@ function Home() {
         onClick={() => console.log('Clase Seleccionada')}
       />
       <Card
-        id='Clase1'
+        id='Clase5'
         title='Curso de Matemáticas'
         subtitle='Profesor: Juan Pérez'
         description='Un curso sobre álgebra y geometría.'
@@ -45,7 +45,7 @@ function Home() {
         onClick={() => console.log('Clase Seleccionada')}
       />
       <Card
-        id='Clase1'
+        id='Clase6'
         title='Curso de Matemáticas'
         subtitle='Profesor: Juan Pérez'
         description='Un curso sobre álgebra y geometría.'
@@ -53,7 +53,7 @@ function Home() {
         onClick={() => console.log('Clase Seleccionada')}
       />
       <Card
-        id='Clase1'
+        id='Clase7'
         title='Curso de Matemáticas'
         subtitle='Profesor: Juan Pérez'
         description='Un curso sobre álgebra y geometría.'
