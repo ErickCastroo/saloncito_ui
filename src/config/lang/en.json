@@ -1,4 +1,7 @@
 {
+  "news": "News",
+  "classWork": "Class work",
+  "classmates": "Classmates",
   "login": "Login",
   "logout": "Logout",
   "home": "Home",
@@ -6,5 +9,9 @@
   "earrings" : "Earrings",
   "joinClass" : "Join",
   "createClass" : "Create class",
-  "showMore" : "Show more"
+  "showMore" : "Show more",
+  "classesEnrolled": "Classes enrolled",
+  "upcoming": "Upcoming",
+  "message": "Great! You don't have any assignments due soon.",
+  "teacher": "Teacher"
 }

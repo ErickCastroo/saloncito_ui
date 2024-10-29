@@ -32,8 +32,8 @@ function Classes() {
 
       <section className='flex items-start justify-center w-full sm:w-8/12 px-2 sm:px-0 sm:space-x-2'>
         <div className='w-3/12 border hidden sm:flex flex-col items-center justify-center p-4 rounded-md'>
-          <h2 className='w-full text-sm p-2 text-center'>Próximas</h2>
-          <p className='text-sm text-gray-400 text-center'>¡Excelente! No tienes ninguna tarea para entregar pronto.</p>
+          <h2 className='w-full text-sm p-2 text-center'>{t('upcoming')}</h2>
+          <p className='text-sm text-gray-400 text-center'>{t('message')}</p>
           <Link to='/' className='text-blue-500 text-xs cursor-pointer'>{t('showMore')}</Link>
         </div>
         <div className='w-full sm:w-9/12'>

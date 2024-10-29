@@ -1,4 +1,7 @@
 {
+  "news": "Novedades",
+  "classWork": "Trabajos de clase",
+  "classmates": "Compañeros de clase",
   "login": "Inicio de sesión",
   "logout": "Cerrar sesión",
   "home": "Inicio",
@@ -6,5 +9,9 @@
   "earrings" : "Trabajos",
   "joinClass" : "Unirse",
   "createClass" : "Crear clase",
-  "showMore" : "Mostrar más"
+  "showMore" : "Mostrar más",
+  "classesEnrolled": "Clases inscritas",
+  "upcoming": "Próximas",
+  "message": "¡Excelente! No tienes ninguna tarea para entregar pronto.",
+  "teacher": "Profesor"
 }

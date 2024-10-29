@@ -50,7 +50,7 @@ function PrincipalSection() {
       </nav>
       <nav className='mt-4'>
         <h2 className='p-2 text-lg'>
-          Clases inscritas
+          {t('classesEnrolled')}
         </h2>
       </nav>
     </div>
