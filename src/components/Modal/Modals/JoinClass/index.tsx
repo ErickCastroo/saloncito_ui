@@ -11,22 +11,22 @@ function JoinClass({ active, toggle }: { active: boolean; toggle: () => void }) 
         <h2 className='text-xl text-black mb-5'>{t('joinClass')}</h2>
 
         <div className='border w-full h-auto text-black p-4'>
-          <h3 className='flex items-start justify-start mt-5 text-lg'>Código de la clase</h3>
+          <h3 className='flex items-start justify-start mt-5 text-lg'>{t('codeClass')}</h3>
           <span className='flex items-start justify-start text-gray-400 text-sm mb-5'>
-            Pídele a tu profesor el código de la clase y, luego, ingrésalo aquí
+            {t('instructions')}
           </span>
           <input
             type='text'
-            placeholder='Código de la clase'
+            placeholder={t('codeClass')}
             className='block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 mb-4'
           />
         </div>
 
-        <p className='text-black mt-5 mb-5'>Para acceder con un código de la clase</p>
+        <p className='text-black mt-5 mb-5'>{t('instruction2')}</p>
         <ul className="list-disc pl-5">
-          <li className='text-black mb-2'>Usa una cuenta autorizada.</li>
-          <li className='text-black mb-2'>Usa un código de la clase que tenga entre 5 y 7 letras o números, sin espacios ni símbolos.</li>
-          <li className='text-black mb-2'>Si tienes problemas para unirte a la clase, pídele ayuda a tu profesor.</li>
+          <li className='text-black mb-2'>{t('instruction3')}</li>
+          <li className='text-black mb-2'>{t('instruction4')}</li>
+          <li className='text-black mb-2'>{t('instruction5')}</li>
         </ul>
 
         <div className="flex flex-row items-end justify-end">

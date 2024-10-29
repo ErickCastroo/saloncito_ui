@@ -14,25 +14,25 @@ function CreateClass({ active, toggle }: { active: boolean; toggle: () => void }
             type='text'
             id='classCode'
             className='block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 mb-4'
-            placeholder='Ingresa el código de clase'
+            placeholder={t('titleClass')}
             required
           />
 
           <input
             type='text'
-            placeholder={t('classDescription')}
+            placeholder={t('descriptionClass')}
             className='block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 mb-4'
           />
 
           <input
             type='text'
-            placeholder={t('classCode')}
+            placeholder={t('asignatureclass')}
             className='block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 mb-4'
           />
 
           <input
             type='text'
-            placeholder={t('classSubject')}
+            placeholder={t('groupclass')}
             className='block w-full p-3 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500 mb-4'
           />
         </div>
