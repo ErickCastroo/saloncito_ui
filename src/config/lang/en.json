@@ -24,6 +24,14 @@
   "classesEnrolled": "Classes enrolled",
   "upcoming": "Upcoming",
   "message": "Great! You don't have any assignments due soon.",
-  "teacher": "Teacher"
-  
+  "teacher": "Teacher",
+  "pendingWorks": "Pending",
+  "lateJob": "Late",
+  "completedWorks": "Completed",
+  "noDeadline": "No deadline",
+  "completeEarly": "Complete early",
+  "thisWeek": "This week",
+  "lastWeek": "Last week",
+  "previous": "Previous",
+  "allClass": "All classes"
 }

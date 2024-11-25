@@ -24,5 +24,14 @@
   "classesEnrolled": "Clases inscritas",
   "upcoming": "Próximas",
   "message": "¡Excelente! No tienes ninguna tarea para entregar pronto.",
-  "teacher": "Profesor"
+  "teacher": "Profesor",
+  "pendingWorks": "Asignados",
+  "lateJob": "Sin entregar",
+  "completedWorks": "Completados",
+  "noDeadline": "Sin fecha límite",
+  "completeEarly": "Completadas",
+  "thisWeek": "Esta semana",
+  "lastWeek": "Semana pasada",
+  "previous": "Anteriores",
+  "allClass": "Todas las clases"
 }

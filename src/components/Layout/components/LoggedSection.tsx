@@ -41,7 +41,7 @@ function PrincipalSection() {
               className={({ isActive }) => {
                 return `rounded flex items-center p-2 border-2 ${isActive ? '' : 'border-transparent'}`
               }}
-              to='/calendar'
+              to='/trabajosPendientes'
             >
               <HiOutlineClipboardDocumentList className='mr-2 text-xl' /> {t('earrings')}
             </NavLink>

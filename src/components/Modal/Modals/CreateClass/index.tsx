@@ -7,8 +7,8 @@ function CreateClass({ active, toggle }: { active: boolean; toggle: () => void }
 
   return (
     <Modal active={active} toggle={toggle}>
-      <div className='w-full h-full overflow-y-auto p-5'>
-        <div className='w-full h-auto text-black p-4'>
+      <div className='w-full h-full overflow-y-auto'>
+        <div className='w-full h-auto text-black'>
           <h3 className='flex items-start justify-start mt-5 mb-5 text-lg'>{t('createClass')}</h3>
           <input
             type='text'

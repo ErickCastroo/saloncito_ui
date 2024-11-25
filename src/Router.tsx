@@ -14,6 +14,9 @@ import { Classes } from '@/modules/class/ui/Pages/Home'
 import { Compañeros } from '@/modules/class/ui/Pages/Compañeros'
 import { Trabajos } from '@/modules/class/ui/Pages/Trabajos'
 import { ViewTrabajo } from '@/modules/class/ui/Pages/ViewTrabajo'
+import { TrabajosPendientes } from '@/modules/class/ui/Pages/TrabajosPendientes/ui/Pages/TrabajosPendientes'
+import { TrabajosAtrasados } from '@/modules/class/ui/Pages/TrabajosPendientes/ui/Pages/Atrasados'
+import { TrabajosCompletados } from '@/modules/class/ui/Pages/TrabajosPendientes/ui/Pages/Completados'
 
 
 function Router() {
@@ -49,6 +52,30 @@ function Router() {
               element={(
                 <AuthRoute>
                   <Trabajos />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/trabajosPendientes'
+              element={(
+                <AuthRoute>
+                  <TrabajosPendientes />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/trabajosAtrasados'
+              element={(
+                <AuthRoute>
+                  <TrabajosAtrasados />
+                </AuthRoute>
+              )}
+            />
+            <Route
+              path='/trabajosCompletados'
+              element={(
+                <AuthRoute>
+                  <TrabajosCompletados />
                 </AuthRoute>
               )}
             />
